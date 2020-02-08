@@ -41,6 +41,7 @@ attr_accessor :name, :age
 
         end
       end
+    end
 
 
 end
