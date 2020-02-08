@@ -16,7 +16,7 @@ attr_accessor :name, :age
 
     def new_meal(waiter, price, tip)
       new_meal = Meal.new(waiter, self, price, tip)
-      binding.pry 
+      binding.pry
       @@meals << new_meal
     end
 
@@ -35,6 +35,7 @@ attr_accessor :name, :age
     def waiters
       waiters = []
     end
+
 
 
 end
