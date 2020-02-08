@@ -1,4 +1,4 @@
-
+require 'pry'
 class Customer
 
 attr_accessor :name, :age
@@ -16,6 +16,7 @@ attr_accessor :name, :age
 
     def new_meal(waiter, price, tip)
       new_meal = Meal.new(waiter, self, price, tip)
+      binding.pry 
       @@meals << new_meal
     end
 
@@ -33,14 +34,6 @@ attr_accessor :name, :age
 
     def waiters
       waiters = []
-
-      @@meals.collect do |i|
-    # binding.pry
-        if i.customer == self
-          waiters << i.customer.waiter
-
-        end
-      end
     end
 
 
